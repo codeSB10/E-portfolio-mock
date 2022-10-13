@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Susan Baral</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/cddc9d355a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript" defer>
+      (function () {
+        emailjs.init("w_ZsxJBlWPBibdiql");
+      })();
+    </script>
+  </head>
+  <body>
+    <section id="landing" onmousemove="moveShapes(event)">
+      <nav>
+        <figure>
+          <img id="personal-logo" src="assets/logo.svg" alt="" />
+        </figure>
+        <ul class="nav__links">
+          <li class="nav__links--link">
+            <a href="#" class="link__hover-effect link__hover-effect--black"
+              >About</a
+            >
+          </li>
+          <li class="nav__links--link">
+            <a
+              href="#projects"
+              class="link__hover-effect link__hover-effect--black"
+              >Projects</a
+            >
+          </li>
+          <li class="nav__links--link" onclick="toggleModal()">
+            <a href="#" class="link__hover-effect link__hover-effect--black" 
+              >Contact</a
+            >
+          </li>
+          <li class="nav__links--link click" onclick="toggleContrast()">
+            <a href="#" class="link__hover-effect link__hover-effect--black"
+              ><i class="fa-solid fa-circle-half-stroke"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+      <header>
+        <div class="header__desc">
+          <h1 class="header__title">Hey</h1>
+          <h1 class="violet">I'm ABCDE.</h1>
+          <p>
+            I'm a <b class="violet">Frontend Developer</b> with a strong passion
+            for building web apps with great user experiences.
+            <br />
+            Here's a bit more <b class="violet click" onclick="toggleModal()"><a href="#modal">about me</a></b
+            >.
+          </p>
+          <div class="header__links">
+            <a class="header__links--link click">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a class="header__links--link click">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a class="header__links--link click">
+              <i class="fa-solid fa-file-pdf"></i>
+            </a>
+          </div>
+        </div>
+      </header>
+      <button class="btn-mail click" onclick="toggleModal()">
+        <a href="#">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </button>
+      <a href="#projects" class="scroll">
+        <div class="scroll__icon click"></div>
+      </a>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3>Here's a bit about me.</h3>
+          <h4 class="violet">Frontend Developer.</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Consectetur, exercitationem quod. Dolores, tempore esse tenetur,
+            dolore itaque odio voluptatibus qui id, quia veniam quos. Use
+            <b class="violet">HTML</b>, <b class="violet">CSS</b>, and
+            <b class="violet">JavaScript</b>.
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                alt=""
+              />
+              <span class="language-name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+                alt=""
+              />
+              <span class="language-name">CSS</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+                alt=""
+              />
+              <span class="language-name">JavaScript</span>
+            </figure>
+          </div>
+        </div>
+        <div class="modal__half modal__contact">
+          <i class="fa-solid fa-xmark click" onclick="toggleModal()"></i>
+          <h3>Let's have a chat!</h3>
+          <h4>I'm currently open to new opportunities.</h4>
+          <form id="contact__form" onsubmit="contact(event)">
+            <label for="">Name</label>
+            <input type="text" name="userName" required />
+            <label for="">Email</label>
+            <input type="email" name="userEmail" required />
+            <label for="">Message</label>
+            <textarea name="message" required></textarea>
+            <button>Send it my way</button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fa-solid fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for the message! Looking forward to speaking to you soon.
+          </div>
+        </div>
+      </div>
+      <img src="assets/semi circle.svg" alt="" class="shape shape-1">
+      <img src="assets/circle.svg" alt="" class="shape shape-2">
+      <img src="assets/squiggly.svg" alt="" class="shape shape-3">
+      <img src="assets/circle.svg" alt="" class="shape shape-4">
+      <img src="assets/triangle.svg" alt="" class="shape shape-5">
+      <img src="assets/circle.svg" alt="" class="shape shape-6">
+      <img src="assets/squiggly.svg" alt="" class="shape shape-7">
+      <img src="assets/circle.svg" alt="" class="shape shape-8">
+      <img src="assets/circle.svg" alt="" class="shape shape-9">
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h1>Here are some of my <span class="violet">projects</span></h1>
+        <ul class="projects__list">
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="assets/google mockup.png" alt="" class="project__img" />
+              <div class="project__desc">
+                <h3>Online Library Platform</h3>
+                <h4>HTML, CSS</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tempora illum inventore temporibus quod ratione quas optio
+                  placeat voluptatum quo mollitia. Voluptate perferendis culpa
+                  nisi, dignissimos reprehenderit ab repellendus nulla dolore
+                  earum voluptates asperiores, impedit quis, sunt totam
+                  distinctio. Nesciunt, neque totam eligendi velit in hic
+                  repudiandae ducimus incidunt labore est.
+                </p>
+              </div>
+              <div class="project__bg"></div>
+            </div>
+          </li>
+          <li class="project">
+            <div class="project__wrapper">
+              <img
+                src="assets/Frontend Simplified.png"
+                alt=""
+                class="project__img"
+              />
+              <div class="project__desc">
+                <h3>Treact Template</h3>
+                <h4>HTML, CSS, JavaScript</h4>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Tempore esse tempora quibusdam facere eveniet praesentium ea
+                  nostrum adipisci asperiores odit in aliquid est sunt nobis,
+                  amet at odio. Itaque magni, corporis, corrupti fugit libero
+                  aliquid consectetur quis temporibus, odio quam adipisci fugiat
+                  possimus voluptatum minima rem ullam explicabo.
+                </p>
+              </div>
+              <div class="project__bg"></div>
+            </div>
+          </li>
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="assets/Eportfolio YT.png" alt="" class="project__img" />
+              <div class="project__desc">
+                <h3>E-Portfolio</h3>
+                <h4>HTML, CSS, JavaScript</h4>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Voluptatem eius quo id fugit minima, possimus voluptatum enim
+                  veritatis fuga ipsa ut voluptate sapiente, et dolore tenetur!
+                  Alias incidunt enim recusandae maiores, aspernatur blanditiis
+                  soluta quis. Doloribus cumque quos vitae omnis.
+                </p>
+              </div>
+              <div class="project__bg"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <a href="#">
+          <img src="assets/logo.svg" alt="" id="personal-logo" />
+        </a>
+        <div class="footer__links">
+          <a
+            href="#"
+            class="footer__links--link link__hover-effect link__hover-effect--white"
+            >GitHub</a
+          >
+          <a
+            href="#"
+            class="footer__links--link link__hover-effect link__hover-effect--white"
+            >LinkedIn</a
+          >
+          <a
+            href="#"
+            class="footer__links--link link__hover-effect link__hover-effect--white" onclick="toggleModal()"
+            >Contact</a
+          >
+          <a
+            href="#"
+            class="footer__links--link link__hover-effect link__hover-effect--white"
+            >Resume</a
+          >
+        </div>
+        <p class="copy">Copyright &copy; 2022 ABCDE</p>
+      </div>
+    </footer>
+  </body>
+</html>
